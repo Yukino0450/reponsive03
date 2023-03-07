@@ -2,6 +2,8 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: black;
+  padding-top: 10px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -9,12 +11,12 @@
 /* #endregion*/
 
 body {
-  color: white;
   font-size: 15px;
 }
 .container {
   display: flex;
   width: 65%;
+  min-width: 800px;
   margin: auto;
   height: 500px;
   margin-top: 10%;
@@ -25,6 +27,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: white;
 }
 
 .container p {
@@ -40,7 +43,7 @@ body {
 
 .first {
   background-color: #e28525;
-  /* border: red solid 1px; */
+  border-radius: 3% 0 0 3%;
 }
 
 .second {
@@ -50,7 +53,7 @@ body {
 
 .third {
   background-color: #00403f;
-  /* border: yellow solid 1px; */
+  border-radius: 0 3% 3% 0;
 }
 
 .btn {
@@ -79,4 +82,34 @@ body {
 
 .third .btn {
   color: #00403f;
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    width: 92%;
+    min-width: 300px;
+  }
+
+  .attribution {
+    bottom: -650px;
+    position: relative;
+  }
+
+  .container div {
+    padding: 20px 50px;
+    height: 70%;
+  }
+
+  .first {
+    border-radius: 3% 3% 0 0;
+  }
+
+  .third {
+    border-radius: 0 0 3% 3%;
+  }
+
+  .btn {
+    margin-top: 10px;
+  }
 }
